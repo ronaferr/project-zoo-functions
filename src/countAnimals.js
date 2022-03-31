@@ -25,4 +25,7 @@ function countAnimals(obj) {
     return e;
   }
 }
+// se a função não tiver parametro ira retornar um obj com todos as especies e suas quantidades
+// se a função receber apenas o parametro species, retorna a quantidade de todos animais daquela especie
+// se receber os dois paranetros retorna a quantidade daquela especie e sexo passado
 module.exports = countAnimals;

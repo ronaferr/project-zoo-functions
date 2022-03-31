@@ -2,7 +2,11 @@ const data = require('../data/zoo_data');
 
 const e = data.employees;
 const s = data.species;
-
+// função vai pegar paremtro, acessar primeira posição e a chave responsibleFor,
+// depois será feito um map, dentro desse map tera um filter de species que será buscado animas que contenham o id da primeira função
+// o resultado obtido será passado por outros 2 map que retornarao a especie e a localização
+// sera feito um map com o paramentro que retornara uma chave 'id' com um valor de id
+// objeto vazio recebera retorno de map com id e demais maps
 function dadosFuncionario(dados) {
   const result = {};
 
@@ -19,10 +23,10 @@ function dadosFuncionario(dados) {
   result.species = criaçãoDeObjetoSpecies;
   result.locations = criaçãoDeObjetoRegiao;
 
-  // console.log(result);
   return result;
 }
-
+// if para saber se parametro está vazio, caso esteja passa por todos os funcionarios e usar função acima
+// if para saber se encontra funcionario com parametro passado, caso de falha, se gera um erro
 function getEmployeesCoverage(obj) {
   // seu código aqui
   if (!obj) {
@@ -42,5 +46,4 @@ function getEmployeesCoverage(obj) {
     return dadosFuncionario(findEmployee);
   }
 }
-// getEmployeesCoverage();
 module.exports = getEmployeesCoverage;

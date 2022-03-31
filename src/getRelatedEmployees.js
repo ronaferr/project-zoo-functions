@@ -10,10 +10,11 @@ function isManager(id) {
 function getRelatedEmployees(managerId) {
   // seu código aqui
   const func = isManager(managerId);
-
+  // if para verificar se a função ismanager é true ou false
   if (func === false) {
     throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
   }
+  // função vai passar por todos os funcionarios e conferir qual deles tem o id icluido em manegers
   const l = [];
   data.employees.forEach((e) => {
     if (e.managers.includes(managerId)) {
